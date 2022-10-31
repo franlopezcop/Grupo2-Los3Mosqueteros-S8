@@ -4,7 +4,8 @@ import AllCategories  from './AllCategories';
 function CategoriesInDb(){
   const [categories, setCategories] = React.useState([]);
   React.useEffect(() => {
-      let endpoint = 'http://localhost:3030/api/products';
+    //   let endpoint = 'http://localhost:3030/api/products';
+    let endpoint = 'https://grupo2-sprint8-api.herokuapp.com/api/products';
       fetch(endpoint)
       .then(response => response.json())
       .then(data => {

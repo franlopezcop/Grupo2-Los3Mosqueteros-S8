@@ -10,7 +10,7 @@ function ContentRowDb() {
 // Total Card Products
 const [products, setProducts] = React.useState([]);
 React.useEffect(() => {
-    let url = "http://localhost:3030/api/products";
+    let url = "https://grupo2-sprint8-api.herokuapp.com/api/products";
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -34,7 +34,7 @@ let totalProducts = {
 // Total Card Users
 const [users, setUsers] = React.useState([]);
 React.useEffect(() => {
-    let url = "http://localhost:3030/api/users";
+    let url = "https://grupo2-sprint8-api.herokuapp.com/api/users";
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -57,7 +57,7 @@ let totalUsers = {
 // Total Card Categories
 const [categories, setCategories] = React.useState([]);
 React.useEffect(() => {
-    let url = "//localhost:3030/api/products";
+    let url = "https://grupo2-sprint8-api.herokuapp.com/api/products";
     fetch(url)
     .then(response => response.json())
     .then(data => {

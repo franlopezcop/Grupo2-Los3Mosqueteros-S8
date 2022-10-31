@@ -6,7 +6,7 @@ function LastProductInDb() {
 
   React.useEffect (()=>{
       //Consulta de productos
-      let lastProductUrl = "http://localhost:3030/api/products/last"
+      let lastProductUrl = "https://grupo2-sprint8-api.herokuapp.com/api/products/last"
         fetch (lastProductUrl)
         .then(response => response.json())
         .then(data =>{
@@ -43,7 +43,8 @@ function LastProductInDb() {
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
               style={{ width: 40 + "rem" }}
-              src={lastProduct.image}
+              //src={lastProduct.image}
+              src={`https://grupo2-sprint8-api.herokuapp.com/images/products/${lastProduct?.Images?.[0].path}`}
               alt="Last Product"
             />
             <p>{lastProduct.description}</p>

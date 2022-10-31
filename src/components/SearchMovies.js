@@ -9,9 +9,9 @@ function SearchMovies() {
   useEffect(() => {
     let url
     if (keyword === "Debe ingresar una palabra") {
-      url = 'http://localhost:3030/api/products';
+      url = 'https://grupo2-sprint8-api.herokuapp.com/api/products';
     } else {
-      url = `http://localhost:3030/api/products?search=${keyword}`
+      url = `https://grupo2-sprint8-api.herokuapp.com/api/products?search=${keyword}`
     }
     fetch(url)
       .then( response => response.json())
@@ -72,7 +72,7 @@ function SearchMovies() {
             {products.length > 0 ? (
               products.map((product, i) => {
                 return (
-                  <div className="col-sm-6 col-md-3 my-4" key={i}>
+                  <div className="col-sm-6 col-md-4 my-4" key={i}>
                     <div className="card shadow mb-4">
                       <div className="card-header py-3">
                         <h5 className="text-center m-0 font-weight-bold text-gray-800">
@@ -86,13 +86,13 @@ function SearchMovies() {
                             // Si existe movie.Poster y si es distinto "N/A", mostramos movie.Poster y si no mostramos la imagen local noPoster importada de los assets
                             src={
                               product.image
-                                ? product.image
+                                ? `https://grupo2-sprint8-api.herokuapp.com/${product.image}`
                                 : noPoster
                             }
                             alt={product.name}
                             style={{
                               width: "90%",
-                              height: "400px",
+                              //height: "400px",
                               objectFit: "cover",
                             }}
                           />
