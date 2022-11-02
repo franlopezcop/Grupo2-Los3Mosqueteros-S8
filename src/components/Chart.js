@@ -25,6 +25,8 @@ function Chart (){
                             <tr>
                                 <th>Producto</th>
                                 <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Descuento</th>
                                 <th>Categoria</th>
                                 <th>Color</th>
                             </tr>

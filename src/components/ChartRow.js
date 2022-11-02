@@ -26,6 +26,8 @@ function ChartRow(props) {
     <tr>
       <td>{props.name}</td>
       <td>{props.description}</td>
+      <td>${props.price}</td>
+      <td>{props.discount}%</td>
       <td>{category}</td>
       <td>{color}</td>
       {/* <td>
